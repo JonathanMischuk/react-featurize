@@ -4,7 +4,8 @@ export {
 	useFeatures,
 	useAddFilterState,
 	useRemoveFilterState,
-	useGetFilterState
+	useGetFilterState,
+	useSetFeatureState
 } from './src/hooks';
 
 export {
