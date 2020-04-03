@@ -7,7 +7,9 @@ export const useAddFilterState = () => {
 	const { instance } = useContext(FeaturizeContext);
 
 	return (filter: string, state: string): void => {
-		instance.addFilterState(filter, state);
-		emitter.emit('update');
+		if (!instance.hasFilterState(filter, state)) {
+			instance.addFilterState(filter, state);
+			emitter.emit('update');
+		}
 	};
 };

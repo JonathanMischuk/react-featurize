@@ -7,7 +7,9 @@ export const useSetFeatureState = () => {
 	const { instance } = useContext(FeaturizeContext);
 
 	return (state: string): void => {
-		instance.setState(state);
-		emitter.emit('update');
+		if (instance.state !== state) {
+			instance.setState(state);
+			emitter.emit('update');
+		}
 	};
 };
