@@ -1,6 +1,6 @@
 {
 	"name": "react-featurize",
-	"version": "0.1.3",
+	"version": "0.1.4",
 	"description": "A tool to featurize UI components without spaghetti logic in React",
 	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",
