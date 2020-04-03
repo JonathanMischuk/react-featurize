@@ -1,5 +1,3 @@
-import './package.json';
-
 export {
 	useFeatures,
 	useAddFilterState,

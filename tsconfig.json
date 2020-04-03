@@ -15,5 +15,5 @@
 		"jsx": "react",
 		"resolveJsonModule": true
 	},
-	"exclude": ["node_modules"]
+	"include": ["package.json", "index.tsx", "src/**/*"]
 }
