@@ -5,10 +5,14 @@
 	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",
 	"scripts": {
-		"build": "tsc --build --clean && tsc",
+		"compile": "tsc --build --clean && tsc",
+		"copy-win": "xcopy README.md dist",
+		"copy-lin": "cp README.md dist",
+		"build-win": "npm run compile && npm run copy-win",
+		"build-lin": "npm run compile && npm run copy-lin",
 		"test": "jest",
 		"preversion": "",
-		"postversion": "",
+		"postversion": "npm run build-win",
 		"postpublish": ""
 	},
 	"keywords": [
